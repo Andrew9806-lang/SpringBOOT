@@ -1,0 +1,22 @@
+databaseChangeLog:
+  - databaseChangeLog:
+      - changeSet:
+          id: 002-seed-car-models
+          author: trae
+          changes:
+            - insert: # dobavlenie v tablicu
+                tableName: car_models
+                columns:
+                  - column: { name: brand, value: "Toyota" }
+                  - column: { name: model_name, value: "Corolla" }
+                  - column: { name: seats, valueNumeric: 5 }
+                  - column: { name: transmission, value: "AUTOMATIC" }
+                  - column: { name: fuel_type, value: "PETROL" }
+            - insert:
+                tableName: car_models
+                columns:
+                  - column: { name: brand, value: "Skoda" }
+                  - column: { name: model_name, value: "Octavia" }
+                  - column: { name: seats, valueNumeric: 5 }
+                  - column: { name: transmission, value: "MANUAL" }
+                  - column: { name: fuel_type, value: "DIESEL" }

@@ -1,0 +1,19 @@
+# Базовые настройки приложения
+spring:
+  application:
+    name: car-sharing
+    # Настройки базы для dev-режима (H2) и Liquibase
+    datasource:
+      #podkluchenie h2 db kotoraya simuliruet PostgreSQL
+      url: jdbc:h2:file:./.data/devdb;MODE=PostgreSQL
+      #ustonavlenie drivera
+      driver-class-name: org.h2.Driver
+      username: sa
+      password:
+    jpa:
+      hibernate:
+        ddl-auto: none  # схемой управляет Liquibase
+      show-sql: true
+    liquibase:
+      enabled: true #chtob schitival fail changelog-master
+      change-log: classpath:db/changelog/db.changelog-master.yaml

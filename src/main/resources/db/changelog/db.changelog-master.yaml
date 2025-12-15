@@ -1,0 +1,13 @@
+#master fail Liqubase podkluchenie db
+#propisivaem kak budet rabotat  Liqubase
+  #Liquibase — это инструмент, который управляет изменениями базы данных.
+
+#Проще говоря:
+
+ # Liquibase следит, какие таблицы, колонки и данные уже созданы в БД,
+#  и что нужно создать или изменить при запуске приложения.
+databaseChangeLog:
+  - include:
+     file: classpath.db/changelog/001-init-tables.yaml
+  - include:
+     file:  classpath.db/changelog/002-seed-data.yaml

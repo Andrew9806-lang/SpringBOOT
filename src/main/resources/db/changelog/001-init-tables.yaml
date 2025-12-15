@@ -1,0 +1,13 @@
+databaseChangeLog:
+    - changeSet:
+        id: 001-create-users
+        author: DevDanko
+        changes:
+          - createTable:
+              tableName: users
+              columns:
+                - column: { name: id, type: BIGINT, autoIncrement: true, constraints: { primaryKey: true, nullable: false } }
+                - column: { name: email, type: VARCHAR(255), constraints: { nullable: false, unique: true } }
+                - column: { name: full_name, type: VARCHAR(255), constraints: { nullable: false } }
+                - column: { name: role, type: VARCHAR(50), constraints: { nullable: false } }
+                - column: { name: created_at, type: TIMESTAMP, constraints: { nullable: false } 

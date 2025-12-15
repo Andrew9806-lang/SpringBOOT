@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title th:text="${appName}">CAR-SHARING</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
 </head>
 <body>
-$END$
+<h1 th:text="${appName}">CAR-SHARING</title></h1>
+<a th:shref="${healthUrl}" href="/api/health">/api/health</a>
 </body>
 </html>

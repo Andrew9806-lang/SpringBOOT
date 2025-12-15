@@ -1,0 +1,21 @@
+databaseChangeLog:
+  - changeSet:
+      id: 004-seed-car-vehicle
+      author: Andrew
+      changes:
+        - insert:
+            tableName: vehicle_car
+            columns:
+              - column: {name: code, valueNumeric: 1}
+              - column : { name: name , value: "ECONOM" }
+              - column : {name: car , valueNumeric: 1}
+        - insert:
+            tableName: vehicle_car
+            columns:
+              - column: {name: code,valueNumeric: 2}
+              - column: {name: name , value: "COMFORT"}
+              - column: {name: car  , valueNumeric: 2}
+
+
+
+
