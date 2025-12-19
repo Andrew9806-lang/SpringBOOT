@@ -6,14 +6,14 @@ import jakarta.persistence.*;
  *Model avtomobilya (brand + harakteristiki )
  */
 @Entity
-@Table(name = "car-models")
+@Table(name = "car_models")
 public class CarModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(nullable = false)
     private String brand;
-    @Column(name = "model-name", nullable = false)
+    @Column(name = "model_name", nullable = false)
     private String nameModels;
     @Column(nullable = false)
     private Integer seats;
@@ -71,5 +71,6 @@ public class CarModel {
     public void setFuelType(FuelType fuelType) {
         this.fuelType = fuelType;
     }
+
 }
 

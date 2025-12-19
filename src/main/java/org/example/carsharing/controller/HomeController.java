@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 // говорит Spring: «Этот класс будет обрабатывать HTTP-запросы и отдавать HTML-страницы».
 public class HomeController {
     //Когда приходит GET-запрос на путь "/" (то есть главная страница сайта),
-    // dolyhen viyivat etot metod index
+    // dolzhen vizivat etot metod index
     @GetMapping("/")
     // metod index budet vizivat html kogda pereidem na glavnuyu stranicu
    public String index(Model model) {

@@ -3,7 +3,7 @@ package org.example.carsharing.domain;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "Location")
+@Table(name = "locations")
 public class Location {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -11,11 +11,11 @@ public class Location {
     @Column(nullable = false)
     private String name;
     @Column(nullable = false)
-    private String adress;
+    private String address;
     @Column(nullable = false)
-    private Double latitube;
+    private Double latitude;
     @Column(nullable = false)
-    private Double longtitube;
+    private Double longitude;
 
     public Long getID() {
         return ID;
@@ -33,27 +33,27 @@ public class Location {
         this.name = name;
     }
 
-    public String getAdress() {
-        return adress;
+    public String getAddress() {
+        return address;
     }
 
-    public void setAdress(String adress) {
-        this.adress = adress;
+    public void setAddress(String adress) {
+        this.address = adress;
     }
 
-    public Double getLatitube() {
-        return latitube;
+    public Double getLatitude() {
+        return latitude;
     }
 
-    public void setLatitube(Double latitube) {
-        this.latitube = latitube;
+    public void setLatitude(Double latitube) {
+        this.latitude = latitube;
     }
 
-    public Double getLongtitube() {
-        return longtitube;
+    public Double getLongitude() {
+        return longitude;
     }
 
-    public void setLongtitube(Double longtitube) {
-        this.longtitube = longtitube;
+    public void setLongitude(Double longtitube) {
+        this.longitude = longtitube;
     }
 }

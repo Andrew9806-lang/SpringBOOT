@@ -6,8 +6,14 @@
 
  # Liquibase следит, какие таблицы, колонки и данные уже созданы в БД,
 #  и что нужно создать или изменить при запуске приложения.
+# Мастер‑файл Liquibase, подключающий миграции по порядку
 databaseChangeLog:
   - include:
-     file: classpath.db/changelog/001-init-tables.yaml
+      file: 001-init-tables.yaml
+      relativeToChangelogFile: true
   - include:
-     file:  classpath.db/changelog/002-seed-data.yaml
+      file: 002-seed-data.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: 003-add-indexes.yaml
+      relativeToChangelogFile: true

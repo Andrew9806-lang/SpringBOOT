@@ -27,9 +27,9 @@ public class Car {
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private CarStatus status;
-    @ManyToOne(optional = false)
-    @JoinColumn(name = "veheicle_id")
-    private VehicleClass vehicleClass;
+//    @ManyToOne(optional = false)
+//    @JoinColumn(name = "veheicle_id")
+//    private VehicleClass vehicleClass;
 
     public Long getId() {
         return id;
@@ -79,11 +79,11 @@ public class Car {
         this.status = status;
     }
 
-    public VehicleClass getVehicleClass() {
-        return vehicleClass;
-    }
-
-    public void setVehicleClass(VehicleClass vehicleClass) {
-        this.vehicleClass = vehicleClass;
-    }
+//    public VehicleClass getVehicleClass() {
+//        return vehicleClass;
+//    }
+//
+//    public void setVehicleClass(VehicleClass vehicleClass) {
+//        this.vehicleClass = vehicleClass;
+//    }
 }

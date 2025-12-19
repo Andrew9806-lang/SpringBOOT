@@ -7,5 +7,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 
 public interface VehicleClassRepository extends JpaRepository<VehicleClass,Long> {
-    public List<Car> findByClassIdAndMinSeats(long classID, int minSeats);
+//    public List<Car> findByClassIdAndMinSeats(long classID, int minSeats);
 }

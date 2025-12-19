@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.function.Function;
 
-public class ModelCarRepo implements CarModelRepository{
+public class ModelCarRepo implements CarModelRepository {
     @Override
     public void flush() {
 
@@ -162,7 +162,6 @@ public class ModelCarRepo implements CarModelRepository{
     public Page<CarModel> findAll(Pageable pageable) {
         return null;
     }
-
 
 
 }
